@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+ 
+<html>
+ 
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css">
+ 
+</head>
+ 
+<body>
+ 
+	<div id="left">
+<h2>Hover over a link to see a preview of it's contents:</h2>
+ 
+		
+	<a href="https://www.example.com" target="ouriframe" class="preview-link">Link Example 1</a>
+ <br>
+ <br>
+ <br>
+    <a href="https://my-resume-project-one.vercel.app/" target="ouriframe" class="preview-link">Link Example 2</a>
+	</div>
+ 
+
+ 
+ <iframe width="600" height="700" name="ouriframe" id="ouriframe"></iframe>
+ 
+ <script src="jquery-1.11.3.js"></script>
+ <script>
+          $(document).ready(function() {
+		  
+		  
+		  $("a").hover(function() { //'When hovering over the div section with id="right":'
+		  
+		  
+		  
+		  //$("iframe").css("background-color", "yellow");}, // Hover-On: 'turn all of the background-colors of our div elements yellow'
+		  $("#ouriframe").show(); //shows the iframe
+		  window.open(this.href, "ouriframe") //opens a link in iframe
+		  return false;},
+		  
+		  function() { 
+		  
+		  //$("iframe").css("background-color", "white");// Hover-Off(not hovered): 'turn the background-color of our div elements grey'
+		  //window.open(null, "ouriframe")
+		  $("#ouriframe").hide(); //hides the iframe when the cursor dosent hover over a link
+ });
+            });
+ 
+ 
+ </script> 
+</body>
+</html>
